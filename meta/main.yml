@@ -10,11 +10,9 @@ galaxy_info:
     - name: "Ubuntu"
       versions:
         - "focal"
-        - "bionic"
         - "jammy"
     - name: "Debian"
       versions:
-        - "buster"
         - "bullseye"
         - "bookworm"
 
