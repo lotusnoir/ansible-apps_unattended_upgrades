@@ -4,12 +4,11 @@ galaxy_info:
   role_name: apps_unattended_upgrades
   description: "Install and configure apt auto-updates (forked from https://github.com/verboEse/ansible-role-unattended-upgrades)"
   license: "Apache License, Version 2.0"
-  min_ansible_version: 2.8
+  min_ansible_version: "2.8"
 
   platforms:
     - name: "Ubuntu"
       versions:
-        - "bionic"
         - "focal"
         - "jammy"
         - "noble"
