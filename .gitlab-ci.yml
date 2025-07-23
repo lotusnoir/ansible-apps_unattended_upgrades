@@ -27,11 +27,6 @@ molecule_debian10:
   image: lotusnoir/molecule_play:v2.0.0
   script:
     - MOLECULE_DISTRIB=debian10 molecule test
-molecule_ubuntu22:
-  stage: molecule
-  image: lotusnoir/molecule_play:latest
-  script:
-    - MOLECULE_DISTRIB=ubuntu22 molecule test
 molecule_ubuntu20:
   stage: molecule
   image: lotusnoir/molecule_play:latest
@@ -39,6 +34,11 @@ molecule_ubuntu20:
     MOLECULE_DOCKER_COMMAND: "--cap-add NET_ADMIN"
   script:
     - MOLECULE_DISTRIB=ubuntu20 molecule test
+molecule_ubuntu22:
+  stage: molecule
+  image: lotusnoir/molecule_play:latest
+  script:
+    - MOLECULE_DISTRIB=ubuntu22 molecule test
 molecule_ubuntu24:
   stage: molecule
   image: lotusnoir/molecule_play:latest
@@ -55,8 +55,8 @@ changelog:
     - molecule_debian12
     - molecule_debian11
     - molecule_debian10
-    - molecule_ubuntu22
     - molecule_ubuntu20
+    - molecule_ubuntu22
     - molecule_ubuntu24
   artifacts:
     paths:

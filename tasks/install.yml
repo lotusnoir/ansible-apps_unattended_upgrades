@@ -4,10 +4,10 @@
     pkg: "powermgmt-base"
     state: "present"
     update_cache: true
-  register: pkg_result
+  register: __pkg_result
   retries: 12
   delay: 10
-  until: pkg_result is success
+  until: __pkg_result is success
   when: "unattended_only_on_ac_power"
 
 - name: "Install unattended-upgrades"
@@ -15,10 +15,10 @@
     pkg: "unattended-upgrades"
     state: "present"
     update_cache: true
-  register: pkg_result
+  register: __pkg_result
   retries: 12
   delay: 10
-  until: pkg_result is success
+  until: __pkg_result is success
 
 - name: "Install reboot dependencies"
   ansible.builtin.import_tasks: "reboot.yml"
