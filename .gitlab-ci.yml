@@ -17,6 +17,7 @@ variables:
   rules:
     # Exécuter uniquement si un fichier pertinent change
     - changes:
+        - ".gitlab-ci.yml"
         - "defaults/**"
         - "files/**"
         - "handlers/**"
