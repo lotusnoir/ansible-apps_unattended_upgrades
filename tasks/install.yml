@@ -39,3 +39,8 @@
     owner: "root"
     group: "root"
     mode: "0644"
+
+- name: "Delete motd file"
+  ansible.builtin.file:
+    path: "/etc/update-motd.d/92-unattended-upgrades"
+    state: absent
